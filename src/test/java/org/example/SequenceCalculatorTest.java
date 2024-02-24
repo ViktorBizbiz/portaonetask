@@ -11,7 +11,7 @@ class SequenceCalculatorTest {
     @Test
     void shouldReturnLargestIncreasingSequence() {
         // given
-        var nums = List.of("1", "2", "3", "5", "2", "22", "20", "21", "19", "14", "10");
+        var nums = new int[]{1, 2, 3, 5, 2, 22, 20, 21, 19, 14, 10};
         
         // when
         var result = SequenceCalculator.calculateLargestIncreasingSequence(nums);
@@ -24,7 +24,7 @@ class SequenceCalculatorTest {
     @Test
     void shouldReturnLargestDecreasingSequence() {
         // given
-        var nums = List.of("1", "2", "3", "5", "2", "22", "20", "21", "19", "14", "10");
+        var nums = new int[]{1, 2, 3, 5, 2, 22, 20, 21, 19, 14, 10};
         
         // when
         var result = SequenceCalculator.calculateLargestDecreasingSequence(nums);

@@ -5,21 +5,17 @@ import java.util.List;
 
 public class SequenceCalculator {
     
-    public static List<Integer> calculateLargestIncreasingSequence(List<String> strings) {
-        return calculateLargestSequence(strings, true);
+    public static List<Integer> calculateLargestIncreasingSequence(int[] nums) {
+        return calculateLargestSequence(nums, true);
     }
     
-    public static List<Integer> calculateLargestDecreasingSequence(List<String> strings) {
-        return calculateLargestSequence(strings, false);
+    public static List<Integer> calculateLargestDecreasingSequence(int[] nums) {
+        return calculateLargestSequence(nums, false);
     }
     
-    private static List<Integer> calculateLargestSequence(List<String> strings, boolean increasing) {
-        List<Integer> result = new ArrayList<>();
-        List<Integer> temp = new ArrayList<>();
-        var nums = strings.stream()
-                .filter(str -> !str.isBlank())
-                .mapToInt(Integer::parseInt)
-                .toArray();
+    private static List<Integer> calculateLargestSequence(int[] nums, boolean increasing) {
+        var result = new ArrayList<Integer>();
+        var temp = new ArrayList<Integer>();
         int prev, present = 0;
         for (int i = 0; i < nums.length; i++) {
             if (i == 0) {
