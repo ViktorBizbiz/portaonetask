@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.calculator.SequenceCalculator;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -8,13 +9,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class SequenceCalculatorTest {
     
+    private static final int[] DATA = new int[]{1, 2, 3, 5, 2, 22, 20, 21, 19, 14, 10};
+    
     @Test
     void shouldReturnLargestIncreasingSequence() {
-        // given
-        var nums = new int[]{1, 2, 3, 5, 2, 22, 20, 21, 19, 14, 10};
-        
         // when
-        var result = SequenceCalculator.calculateLargestIncreasingSequence(nums);
+        var result = SequenceCalculator.calculateLargestIncreasingSequence(DATA);
         
         // then
         var expected = List.of(1, 2, 3, 5);
@@ -23,11 +23,8 @@ class SequenceCalculatorTest {
     
     @Test
     void shouldReturnLargestDecreasingSequence() {
-        // given
-        var nums = new int[]{1, 2, 3, 5, 2, 22, 20, 21, 19, 14, 10};
-        
         // when
-        var result = SequenceCalculator.calculateLargestDecreasingSequence(nums);
+        var result = SequenceCalculator.calculateLargestDecreasingSequence(DATA);
         
         // then
         var expected = List.of(21, 19, 14, 10);
