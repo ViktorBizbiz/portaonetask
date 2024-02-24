@@ -1,4 +1,4 @@
-package org.example;
+package org.example.calculator;
 
 import org.example.calculator.ResultCalculator;
 import org.example.util.ProgramResult;

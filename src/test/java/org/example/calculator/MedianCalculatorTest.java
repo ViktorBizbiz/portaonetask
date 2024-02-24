@@ -1,4 +1,4 @@
-package org.example;
+package org.example.calculator;
 
 import org.example.calculator.MedianCalculator;
 import org.junit.jupiter.api.Test;
